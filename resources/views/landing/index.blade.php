@@ -2,6 +2,7 @@
 @section('title','Beranda')
 @section('content')
 <h1 class="mb-3">Berita utama</h1>
+{{-- <p>Total Berita Dipublikasikan: <strong>{{ $total }}</strong></p> --}}
 
 <div class="row">
         <!-- ##### Hero Area Start ##### -->
@@ -44,7 +45,7 @@
                                 </div>
                             </div>
                             <!-- Single Blog Post Area -->
-                            <div class="single-blog-post style-1" data-animation="fadeInUpBig" data-delay="500ms" data-duration="1000ms">
+                            <div class="single-blog-post style-1 mt-20" data-animation="fadeInUpBig" data-delay="500ms" data-duration="1000ms">
                                 <!-- Blog Thumbnail -->
                                 <div class="blog-thumbnail bg-overlay">
                                     <a href="#"><img src="{{ ('assets/img/bg-img/3.jpg') }}"></a>
@@ -65,8 +66,10 @@
         </div>
     </div>
     <!-- ##### Hero Area End ##### -->
-    <p>Total Berita Dipublikasikan: <strong>{{ $total }}</strong></p>
 
+</div>
+
+<div class="row mt-5">
     @foreach($latest as $item)
         <div class="col-md-4 mb-3">
             <div class="card h-100">
