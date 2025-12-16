@@ -69,15 +69,16 @@
 
 </div>
 
-<div class="row mt-5">
+<div class="row mt-5 p-12">
+    <h2>Mini thumb news</h2>
     @foreach($latest as $item)
         <div class="col-md-4 mb-3">
             <div class="card h-100">
                 <div class="card-body">
-                    <h5 class="card-title">{{ $item->judul }}</h5>
                     <p class="text-muted">{{ $item->kategori }} | {{ $item->tanggal_publikasi->format('d M Y') }}</p>
+                    <h5 class="card-title">{{ $item->judul }}</h5>
                     <a href="/berita/{{ $item->slug }}" class="btn btn-sm btn-
-                    primary">Baca</a>
+                    primary">Baca selengkapnya</a>
                 </div>
             </div>
         </div>

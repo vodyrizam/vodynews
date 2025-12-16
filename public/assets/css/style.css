@@ -1,3 +1,13 @@
+h1 {
+    color: #212121 !important;
+    margin-top: 64px;
+    padding-left: 12px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
 .single-blog-post {
     position: relative;
     z-index: 1;
@@ -57,4 +67,33 @@
 
 .mt-20 {
     margin-top: 20px;
+}
+
+.p-12 {
+    padding: 12px;
+}
+
+.card-body {
+    padding: 30px;
+    background: #f9f9f9;
+}
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: var(--bs-secondary-color) !important;
+    font-size: .82rem;
+    margin-bottom: 5px;
+}
+
+.btn-sm {
+    padding: 0;
+    color: #0048ff;
+    margin-top: 15px;
+}
+
+
+footer {
+    background-color: #212121 !important;
+    color: #FFF;
+    padding: 50px;
 }
