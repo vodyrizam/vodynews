@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\BeritaStatus;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -11,6 +12,18 @@ class Berita extends Model
     
     protected $casts = [
         'tanggal_publikasi' => 'date',
-        'status' => 'integer',
+        'status' => BeritaStatus::class,
+    ];
+
+    protected $fillable = [
+        'penulis_id',
+        'validator_id',
+        'judul',
+        'slug',
+        'isi',
+        'kategori',
+        'hashtag',
+        'status',
+        'tanggal_publikasi',
     ];
 }

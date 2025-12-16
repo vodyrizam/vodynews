@@ -13,6 +13,10 @@
     background-size: cover;
 }
 
+.navbar {
+    background-color: #0048ff !important;
+}
+
 .blog-thumbnail {
     width: 100%;
     position: relative;

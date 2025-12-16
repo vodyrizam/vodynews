@@ -10,10 +10,14 @@
 <tr>
 <td>{{ $b->judul }}</td>
 <td>{{ $b->kategori }}</td>
-<td>{{ $b->status==2?'Publish':'Draft' }}</td>
+<td>{{ $b->status === \App\Enums\BeritaStatus::PUBLISH ? 'Publish':'Draft' }}</td>
 <td>
 <a href="/dashboard/berita/{{ $b->id }}/edit" class="btn btn-sm btn-
 warning">Edit</a>
+@if (auth()->user()->role->name === 'validator' && $b->status === \App\Enums\BeritaStatus::DRAFT)
+<a href="/dashboard/berita/{{ $b->id }}/publish" class="btn btn-sm btn-
+warning">Publish</a>
+@endif
 <form action="/dashboard/berita/{{ $b->id }}" method="POST"
 style="display:inline">
 @csrf @method('DELETE')

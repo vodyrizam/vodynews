@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title','Beranda')
 @section('content')
-<h1 class="mb-3">Ternyata test berita</h1>
+<h1 class="mb-3">Berita utama</h1>
 
 <div class="row">
         <!-- ##### Hero Area Start ##### -->
