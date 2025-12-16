@@ -13,9 +13,10 @@ Route::get('/berita/{slug}', [LandingController::class, 'show']);
 Auth::routes();
 
 Route::middleware('auth')->prefix('dashboard')->group(function () {
-    Route::get('/', [DashboardController::class, 'index']);
+    Route::get('/', DashboardController::class);
 
     Route::resource('berita', DashboardBeritaController::class);
+    Route::get('berita/{id}/publish', [DashboardBeritaController::class, 'publishPage']);
     Route::post('berita/{id}/publish', [DashboardBeritaController::class,'publish']);
 
     Route::resource('users', DashboardUserController::class);
