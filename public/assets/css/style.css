@@ -1,0 +1,26 @@
+.single-blog-post {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.bg-overlay {
+    position: relative;
+    z-index: 2;
+    background-position: center center;
+    background-size: cover;
+}
+
+.blog-thumbnail {
+    width: 100%;
+    position: relative;
+    background: #0048ff;
+}
+
+.blog-thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
